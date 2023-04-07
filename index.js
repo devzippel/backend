@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = 5051;
 const Moralis = require("moralis").default;
 const cors = require("cors");
 
