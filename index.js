@@ -45,7 +45,7 @@ app.get("/address", async (req, res) => {
 Moralis.start({
     apiKey: MORALIS_API_KEY,
 }).then(() => {
-    app.listen(port,'0.0.0.0', () => {
+    app.listen(port, '0.0.0.0', () => {
         console.log(`Listening for API Calls`);
     });
 });
