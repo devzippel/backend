@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 5051;
+const port = 8080;
 const Moralis = require("moralis").default;
 const cors = require("cors");
 
@@ -45,7 +45,7 @@ app.get("/address", async (req, res) => {
 Moralis.start({
     apiKey: MORALIS_API_KEY,
 }).then(() => {
-    app.listen(port, () => {
+    app.listen(port,'0.0.0.0', () => {
         console.log(`Listening for API Calls`);
     });
 });
