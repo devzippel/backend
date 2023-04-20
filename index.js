@@ -62,7 +62,7 @@ Moralis.start({
   app.listen(port, "0.0.0.0", () => {
     console.log(`Listening for API Calls`);
 
-    // Call the getEthPrice function every 15 minutes
-    setInterval(getEthPrice, 15 * 60 * 1000);
+    
   });
 });
+
