@@ -17,7 +17,7 @@ const MORALIS_API_KEY = process.env.MORALIS_API_KEY;
 async function getEthPrice() {
   try {
     const response = await Moralis.EvmApi.token.getTokenPrice({
-      address: "0x14bb7a637fAb7Ef189Ddb052153239cf31892D8c",
+      address: "0xdA2c0CDf7d764F8C587380CAdF7129E5eCb7Efb7",
       chain: "0x38",
     });
 
@@ -31,7 +31,7 @@ async function getEthPrice() {
 app.get("/getethprice", async (req, res) => {
   try {
     const response = await Moralis.EvmApi.token.getTokenPrice({
-      address: "0x14bb7a637fAb7Ef189Ddb052153239cf31892D8c",
+      address: "0xdA2c0CDf7d764F8C587380CAdF7129E5eCb7Efb7",
       chain: "0x38",
     });
 
@@ -61,8 +61,8 @@ app.get("/address", async (req, res) => {
 
 app.get("/stakingbalance", async (req, res) => {
   try {
-    const chain = EvmChain.BSC_TESTNET;
-    const address = "0x1c858295C0fEEbb372e2E6589CBc26D9D5DC52b7";
+    const chain = EvmChain.BSC;
+    const address = "0x4951B6Cac448EE3732921DEbF5018C2AA074264a";
     const functionName = "stakingTokenBalance";
 
     const response = await Moralis.EvmApi.utils.runContractFunction({
@@ -85,8 +85,8 @@ let stakingBalance;
 Moralis.start({
   apiKey: MORALIS_API_KEY,
 }).then(async () => {
-  const chain = EvmChain.BSC_TESTNET;
-  const address = "0x1c858295C0fEEbb372e2E6589CBc26D9D5DC52b7";
+  const chain = EvmChain.BSC;
+  const address = "0x4951B6Cac448EE3732921DEbF5018C2AA074264a";
   const functionName = "stakingTokenBalance";
 
   stakingBalance = await Moralis.EvmApi.utils.runContractFunction({
